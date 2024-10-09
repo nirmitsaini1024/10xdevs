@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Comfortaa } from "next/font/google";
+import { cn } from "@/lib/utils";
 
 const fontComfortaa = Comfortaa({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-comfortaa",
+  display: "swap", // Optional, to improve performance
 });
 
 export const metadata: Metadata = {
@@ -20,9 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={` ${fontComfortaa.variable} antialiased`}
-      >
+      <body className={cn("antialiased", fontComfortaa.className)}>
         {children}
       </body>
     </html>
