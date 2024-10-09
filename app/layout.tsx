@@ -7,7 +7,7 @@ const fontComfortaa = Comfortaa({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-comfortaa",
-  display: "swap", // Optional, to improve performance
+  display: "swap",
 });
 
 export const metadata: Metadata = {
