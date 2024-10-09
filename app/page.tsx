@@ -6,7 +6,7 @@ export default function Home() {
       <h1 className=" font-extrabold text-5xl md:text-7xl lg:text-9xl">
         10xdevs
       </h1>
-      <div className="flex w-full md:justify-center justify-between  md:gap-36 text-sm md:text-xl">
+      <div className="flex w-full md:justify-center justify-between px-4  md:gap-36 text-sm md:text-xl">
         <Link
           href="https://nirmitsaini.10xdevs.in"
           className="font-bold  hover:text-zinc-400"
