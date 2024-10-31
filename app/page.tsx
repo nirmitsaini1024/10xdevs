@@ -22,16 +22,19 @@ function App() {
               icon={<Code2 className="w-8 h-8 stroke-white" />}
               name="Nirmit Saini"
               role="Full Stack Developer"
+              link="https://nirmitsaini.10xdevs.in"
             />
             <TeamCard 
               icon={<Terminal className="w-8 h-8 stroke-white" />}
               name="Aryan Yadav"
               role="Full Stack Developer"
+              link="https://aryanyadav.10xdevs.in"
             />
             <TeamCard 
               icon={<Zap className="w-8 h-8 stroke-white" />}
               name="Aayush Joshi"
               role="Machine Learning Engineer"
+              link="https://aayushjoshi.10xdevs.in"
             />
           </div>
         </div>
@@ -40,21 +43,24 @@ function App() {
   );
 }
 
-function TeamCard({ icon, name, role }: { 
+function TeamCard({ icon, name, role, link }: { 
   icon: React.ReactNode;
   name: string;
   role: string;
+  link: string;
 }) {
   return (
-    <div className="group p-6 rounded-2xl bg-gradient-to-b from-zinc-900 to-zinc-950 hover:from-zinc-800 hover:to-zinc-900 transition-all duration-300 border border-zinc-800/50 hover:border-zinc-700/50 shadow-lg backdrop-blur-sm">
-      <div className="flex flex-col items-center text-center space-y-4">
-        <div className="p-3 rounded-xl bg-zinc-800/50 group-hover:bg-zinc-700/50 transition-colors duration-300">
-          {icon}
+    <a href={link} target="_blank" rel="noopener noreferrer" className="group">
+      <div className="p-6 rounded-2xl bg-gradient-to-b from-zinc-900 to-zinc-950 hover:from-zinc-800 hover:to-zinc-900 transition-all duration-300 border border-zinc-800/50 hover:border-zinc-700/50 shadow-lg backdrop-blur-sm">
+        <div className="flex flex-col items-center text-center space-y-4">
+          <div className="p-3 rounded-xl bg-zinc-800/50 group-hover:bg-zinc-700/50 transition-colors duration-300">
+            {icon}
+          </div>
+          <h3 className="text-xl font-semibold text-white">{name}</h3>
+          <p className="text-zinc-400 text-sm font-light">{role}</p>
         </div>
-        <h3 className="text-xl font-semibold text-white">{name}</h3>
-        <p className="text-zinc-400 text-sm font-light">{role}</p>
       </div>
-    </div>
+    </a>
   );
 }
 
