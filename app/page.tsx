@@ -31,7 +31,7 @@ function App() {
             <TeamCard 
               icon={<Zap className="w-8 h-8 stroke-white" />}
               name="Aayush Joshi"
-              role="Machine Learning"
+              role="Machine Learning Engineer"
             />
           </div>
         </div>
