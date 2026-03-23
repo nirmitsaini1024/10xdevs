@@ -3,9 +3,14 @@ import { Code2, Terminal, Zap } from 'lucide-react';
 
 function App() {
   return (
-    <div className="min-h-screen bg-[linear-gradient(to_bottom,_#18181b_0%,_#09090b_50%,_#000000_100%)] text-white flex items-center justify-center">
+    <div className="relative min-h-screen text-white flex items-center justify-center overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/cocks.png')" }}
+      />
+      <div className="absolute inset-0 bg-black/50" />
       {/* Hero Section */}
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col items-center justify-center text-center space-y-12">
           <div className="space-y-4">
             <h1 className="text-6xl md:text-8xl font-bold tracking-tighter bg-gradient-to-b from-white via-gray-200 to-gray-400 text-transparent bg-clip-text">
